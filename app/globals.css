@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --bg: #0b1224;
+  --card: #0f172a;
+  --border: #1f2937;
+  --muted: #94a3b8;
+  --primary: #22d3ee;
+  --primary-strong: #0ea5e9;
+  --text: #e2e8f0;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.08), transparent 26%),
+    radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.14), transparent 30%),
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+* {
+  @apply antialiased;
+}
+
+.light body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
