@@ -45,6 +45,8 @@ pnpm dev
 Frontend: http://localhost:3000 (Next).  
 Backend proxy: http://localhost:4000 (Express).  
 Rewrites send `/api/*` from Next to the proxy.
+![Dashboard Screenshot](https://raw.githubusercontent.com/surelsnap/AtomSync-Smart-Fan-Control/main/Screenshot%202025-12-11%20200438.png)
+![Dashboard Screenshot](https://raw.githubusercontent.com/surelsnap/AtomSync-Smart-Fan-Control/main/Screenshot%202025-12-11%20200523.png)
 
 ## Usage flow
 1) Enter API key + refresh token (+ base URL).  
