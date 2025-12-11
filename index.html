@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -107,3 +108,114 @@
 </body>
 </html>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BreezeSync | Atomberg Fan Control</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">BreezeSync · Smart Fan Control</p>
+        <h1>Control your Atomberg fans securely</h1>
+        <p class="lede">Enter your API key and refresh token to fetch your fans. Use Demo Mode if you just want to explore the UI without real hardware.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="demoBtn" class="btn ghost">Load Demo</button>
+        <button id="clearBtn" class="btn subtle">Clear saved creds</button>
+      </div>
+    </header>
+
+    <section class="card credentials">
+      <div class="card-header">
+        <div>
+          <h2>Credentials</h2>
+          <p class="muted">Stored locally (never sent anywhere except Atomberg API calls you trigger).</p>
+        </div>
+        <button id="fetchBtn" class="btn primary">Save & Fetch fans</button>
+      </div>
+      <div class="grid">
+        <label class="field">
+          <span>API Key</span>
+          <input id="apiKey" type="password" placeholder="sk_..." autocomplete="off">
+        </label>
+        <label class="field">
+          <span>Refresh Token</span>
+          <input id="refreshToken" type="password" placeholder="rt_..." autocomplete="off">
+        </label>
+        <label class="field">
+          <span>Base URL</span>
+          <input id="baseUrl" type="text" value="https://developer.atomberg-iot.com" autocomplete="off">
+          <small class="muted">Change if using your own proxy (recommended).</small>
+        </label>
+      </div>
+      <div class="inline-note">
+        <strong>Tip:</strong> For production, route calls through your own backend to keep keys off the client. See README.
+      </div>
+    </section>
+
+    <section class="card fans">
+      <div class="card-header">
+        <div>
+          <h2>Fans</h2>
+          <p class="muted" id="fansStatus">Waiting for credentials...</p>
+        </div>
+      </div>
+      <div id="fansContainer" class="fan-grid"></div>
+    </section>
+  </div>
+
+  <template id="fanCardTemplate">
+    <div class="fan-card">
+      <div class="fan-card__top">
+        <div>
+          <p class="eyebrow fan-status"></p>
+          <h3 class="fan-name"></h3>
+          <p class="muted fan-location"></p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" class="fan-power">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="fan-controls">
+        <label class="control">
+          <span>Speed</span>
+          <input type="range" min="0" max="5" step="1" class="fan-speed">
+          <div class="control-meta">
+            <span class="muted">0 = Off · 5 = Max</span>
+            <span class="control-value"></span>
+          </div>
+        </label>
+        <label class="control">
+          <span>Mode</span>
+          <select class="fan-mode">
+            <option value="normal">Normal</option>
+            <option value="breeze">Breeze</option>
+            <option value="sleep">Sleep</option>
+            <option value="turbo">Turbo</option>
+          </select>
+        </label>
+      </div>
+      <div class="fan-meta">
+        <span class="muted">Device ID:</span>
+        <span class="fan-id"></span>
+      </div>
+      <div class="fan-actions">
+        <button class="btn subtle refresh-fan">Refresh</button>
+        <button class="btn primary apply-fan">Apply</button>
+      </div>
+      <p class="muted fan-message"></p>
+    </div>
+  </template>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
+
+>>>>>>> e26fc1da58dfa9fb599194d348340593e3ec9eb8
