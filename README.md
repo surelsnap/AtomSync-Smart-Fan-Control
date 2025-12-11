@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# BreezeSync (Atomberg Smart Fan Control)
+# AtomSync (Atomberg Smart Fan Control)
 
 A Next.js (App Router) + TypeScript + Tailwind app with a small Express proxy for secure Atomberg API access. Credentials are stored encrypted in an HTTP-only cookie on the proxy; the browser never sees your secrets. Includes demo mode, automations, voice commands, telemetry, and PWA basics.
 
